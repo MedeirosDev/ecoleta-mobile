@@ -42,10 +42,10 @@ const Points = () => {
   }, []);
 
   useEffect(() => {
-    pointRepository.list(city, uf).then(points => {
+    pointRepository.list(city, uf, selectedItems).then(points => {
       setPoints(points);
     });
-  }, []);
+  }, [selectedItems]);
   
 
   useEffect(() => {
